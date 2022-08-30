@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{CSE3140 — Lab 0}
+\author{Mike Medved}
+\date{August 29th, 2022}
+
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry} 
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\usemintedstyle{monokai}
+
+\begin{document}
+
+\maketitle
+
+\section{Deliverables}
+
+\subsection{Part 3: Directories, pwd, ls, man, cd, and mkdir}
+
+The Q3 file for my group's VM was named \textbf{Q3.14323}. The file contained exactly 256 X's, and since each character is 1 byte long, the resultant file size was \textbf{256 bytes}.
+
+\subsection{Part 4: Terminal Text Editors - Vim}
+
+The password for the User with ID \#44444 in my group's VM file is \textbf{P63348U4020,P78930}. I accomplished finding this password by using the builtin search functionality in Vim. This was done by using the \textbf{/ (Slash)} operator and subsequently typing in the search target value, \textbf{U44444}. 
+
+\subsection{Part 5: chmod + sudo}
+
+In order to retrieve the contents of the Q5 file in my group's VM, I used the sudo command in tandem with the chmod command with the following parameters:
+
+\begin{minted}{bash}
+sudo chmod +r Q5
+\end{minted}
+
+$\hfill \break$
+After executing the above command, I was granted read permissions to the file, which I was able to use in order to both (a) copy the file to the Solutions directory, and (b) get the contents to put them in this report:
+
+$\hfill \break$
+The contents of my group's file were: \textbf{V86213}
+
+\subsection{Part 6: Grep, Redirection, and Pipes}
+
+In order to find an arbitrary string according to a pattern, I used a regular expression in tandem with the grep command to filter out non-matching lines in the passwords file. The regular expression I used was \textbf{U6.*Y}, which matched against U6xxxxxY by using the "any" operating \textbf{. (Period)}.
+
+$\hfill \break$
+The resultant string that I found was: \textbf{U659183Y}.
+
+\subsection{Part 7: Python}
+
+In order to be able to run the Python file, Q7.py, I needed to give it read permissions, so I used chmod with sudo to accomplish this.
+
+\begin{minted}{bash}
+sudo chmod +r Q7.py
+\end{minted}
+
+$\hfill \break$
+After granting it read permissions, I was able to execute the file using the python3 binary, and got the following output: \textbf{S877858783804296403038}
+
+\end{document}
