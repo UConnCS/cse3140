@@ -7,6 +7,8 @@
 *.gz
 *.fdb_latexmk
 *.fls
-*/_minted-report
+*/_minted-*
+*/*/_minted-report
 *.snippets
+*.out
 venv/
