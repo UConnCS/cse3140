@@ -29,9 +29,9 @@
 
 \maketitle
 
-\section{Deliverables}
+\section*{Deliverables}
 
-\subsection{Part 1}
+\subsection*{Part 1}
 
 There are two ways you can get the password for the first part.
 
@@ -77,7 +77,7 @@ $ hexdump -C Login.pyc | grep -A 1 "Adam"
 \end{itemize}
 
 \break
-\subsection{Part 2}
+\subsection*{Part 2}
 
 We modified our \textit{Break1.py} script to again brute force the passwords for all usernames in the \textit{gang.txt} file. Included below is the modified source code for \textit{Break2.py}, which was used to get the passwords.
 
@@ -141,7 +141,7 @@ Time taken: 2.660959005355835s
 \end{minted}
 
 \newpage
-\subsection{Part 3}
+\subsection*{Part 3}
 
 We modified our \textit{Break2.py} script to again brute force the passwords for all undiscovered usernames in the \textit{gang.txt} file. Included below is the modified source code for \textit{Break3.py}, which was used to get the passwords.
 
@@ -149,48 +149,40 @@ We modified our \textit{Break2.py} script to again brute force the passwords for
 import os
 import sys
 from time import time
+import subprocess
 
 start = time()
-print(f"Start time: {start}")
-
 found = []
 users = []
+new_found = []
 
 with open("../Q2/A2") as f:
     for line in f:
         line = line.strip()
-        found.append((line.split(",")[0], line.split(",")[1]))
+        if ((line.split(",")[1]) != "?"):
+            found.append((line.split(",")[0], line.split(",")[1]))
 
 with open("../gang.txt") as f:
     for line in f:
         line = line.strip()
         if line not in [x[0] for x in found]:
             users.append(line)
-   
-    with open("../PwnedPWs100k.txt") as f:
-        i = 0
-        for password in f:
-            if len(users) == 0:
-                break
 
+
+    with open("../PwnedPWs100k.txt") as f:
+        for password in f:
             password = password.strip()
             for user in users:
                 if os.system(f'python3 Login.pyc {user} "{password}" > /dev/null') == 0:
-                    users.remove(user)
-                    found.append((user, password))
-            i += 1
-
-if len(users) > 0:
-    for user in users:
-        found[user] = "?"
+                    print(f"Found {user} with password {password} (+{(time() - start):.2f}s)")
+                    new_found.append((user, password))
+    
 
 with open("A3", "w") as f:
     for user, password in found:
-        print(f"{user},{password}")
         f.write(f"{user},{password}")
 
-print(f"End time: {str(time())}")
-print(f"Time taken: {str(time() - start)}s")
+print(f"Time taken: {str(time() - start)}ms")
 \end{minted}
 
 $\hfill \break$
@@ -199,30 +191,17 @@ Executing the above script revealed the passwords for some members, and it's out
 \begin{minted}[fontsize=\scriptsize]{bash}
 $ python3 Break3.py 
 Start time: 1663434897.4392138
-Adam,?
-Al,?
-Charles,?
-Ted,?
-Tom,?
-Bonnie,123456
-Clyde,?
-Kevin,?
-Andrew,?
-Jack,?
-Richard,?
-Donald,?
-Kim,?
-Vlad,?
-Benedict,?
-Billy,12345
-Anne,qwerty
-John,?
+Found Kim with password skateordie (+2513.37s)
+Found Tom with password casillas (+2737.03s)
+Found Benedict with password serga_torov (+3162.28s)
+Found Adam with password lovable1 (+3408.61s)
+Found Clyde with password andrew16 (+3615.20s)
 End time: 1663435557.0922985
 Time taken: 659.6530847549438s
 \end{minted}
 
 \newpage
-\subsection{Part 4}
+\subsection*{Part 4}
 
 We modified our \textit{Break3.py} script to again brute force the passwords for all usernames in the \textit{gang.txt} file, but this time we used a leaked passwords file, \textit{PwnedPWFile} to check against. Included below is the modified source code for \textit{Break4.py}, which was used to get the passwords.
 
@@ -286,15 +265,152 @@ Time taken: 1824.5047957897186s
 \end{minted}
 
 \newpage
-\subsection{Part 5}
+\subsection*{Part 5}
 
-\textit{Pending}
+We modified our \textit{Break4.py} script to hash and brute force the passwords for all usernames in the \textit{gang.txt} file, but this time we used a leaked password hashes file, \textit{HashedPWs} to check against. Included below is the modified source code for \textit{Break5.py}, which was used to get the passwords.
 
-\subsection{Part 6}
+\begin{minted}[fontsize=\scriptsize]{python}
+import os
+import hashlib
 
-\textit{Pending}
+from time import time
 
-\subsection{Part 7}
+start = time()
+cracked = {}
+pairs = []
+names = []
+
+print(f"Start time: {start}")
+
+with open("../gang.txt", "r") as f:
+    for line in f:
+        line = line.strip()
+        if line:
+            names.append(line)
+
+with open('HashedPWs', 'r') as f:
+    pairs = [(split[0], split[1]) for line in f for split in [line.split(',')] if split[0] in names]
+
+for pair in pairs:
+    user = pair[0]
+    found = False
+    
+    with open('../PwnedPWs100k.txt', 'r') as f:
+        while True:
+            if found:
+                break
+            line = f.readline().strip()
+            for i in range(0, 10):
+                for j in range(0, 10):
+                    guess = f"{line}{i}{j}"
+                    h = hashlib.sha256()
+                    h.update(bytes(guess, 'utf-8'))
+                    digest = h.hexdigest()
+
+                    if (digest == pair[1]):
+                        cracked[user] = guess
+                        print(f"Cracked {user} with {guess}")
+                        found = True
+                        break
+
+print(f"Time taken: {time() - start}s")
+print(f"End time: {time()}")
+
+with open('A5', 'w') as f:
+    for username, password in cracked.items():
+        f.write(f"{username},{password}")
+\end{minted}
+
+$\hfill \break$
+Executing the above script revealed the passwords for three members, and it's output is shown below.
+
+\begin{minted}[fontsize=\scriptsize]{bash}
+$ python3 Break5.py
+Start time: 1664240590.1418912
+Ted,01142
+Tom,actor182
+Bonnie,demi44
+Time taken: 4605.2874929s
+End time: 1664245195.4293841
+\end{minted}
+
+\newpage
+\subsection*{Part 6}
+
+We modified our \textit{Break5.py} script to hash and brute force the salted passwords for all usernames in the \textit{gang.txt} file, but this time we used a leaked password hashes + salts file, \textit{HashedPWs} to check against. Included below is the modified source code for \textit{Break6.py}, which was used to get the passwords.
+
+\begin{minted}[fontsize=\scriptsize]{python}
+import os
+import hashlib
+
+from time import time
+
+start = time()
+cracked = {}
+pairs = []
+names = []
+
+print(f"Start time: {start}")
+
+with open("../gang.txt", "r") as f:
+    for line in f:
+        line = line.strip()
+        if line:
+            names.append(line)
+
+with open('SaltedPWs', 'r') as f:
+    pairs = [(split[0], split[1], split[2].strip()) for line in f for split in [line.split(',')] if split[0] in names]
+
+    
+for pair in pairs:
+    user = pair[0]
+    salt = pair[2]
+    found = False
+    
+    with open('../PwnedPWs100k.txt', 'r') as f:
+        for pwd in f:
+            if found:
+                break
+            line = pwd.strip()
+            for i in range(0, 10):
+                for j in range(0, 10):
+                    guess = f"{line}{i}{j}{salt}"
+                    if os.system(f'python3 Login.pyc {user} {guess} > /dev/null') == 0:
+                        h = hashlib.sha256()
+                        h.update(bytes(guess, 'utf-8'))
+                        digest = h.hexdigest()
+
+                        if (digest == pair[1]):
+                            cracked[user] = guess
+                            print(f"Cracked {user} with {guess}")
+                            found = True
+                            break
+                if found:
+                    break
+
+print(f"Time taken: {time() - start}s")
+print(f"End time: {time()}")
+
+with open('A6', 'w') as f:
+    for username, password in cracked.items():
+        f.write(f"{username},{password}")
+\end{minted}
+
+$\hfill \break$
+Executing the above script revealed the passwords for three members, and it's output is shown below.
+
+\begin{minted}[fontsize=\scriptsize]{bash}
+$ python3 Break6.py
+Start time: 1664347415.446832
+Adam,dolphin563
+Richard,0708198494
+Benedict,ajax59
+Time taken: 221.30462224000001s
+End time: 1664347636.751454
+\end{minted}
+
+\newpage
+\subsection*{Part 7}
 
 According to \href{https://haveibeenpwned.com}{haveibeenpwned}, no breaches were detected for my UConn email. An image is attached below.
 
@@ -302,12 +418,15 @@ According to \href{https://haveibeenpwned.com}{haveibeenpwned}, no breaches were
     \includegraphics[width=0.75\textwidth]{q7.png}
 \end{center}
 
-\subsection{Part 8}
+\subsection*{Part 8}
 
-\textit{Pending}
+One serious example of a plaintext password exposure incident was the DailyQuiz.me 2021 Breach, where 8.3 million accounts were leaked, with their associated personal information, and plaintext passwords. We choose this example due to (a) the severity of such a breach, given that all passwords were both unhashed and unsalted, and (b) due to the sheer scale of the breach. \href{https://monitor.firefox.com/breach-details/DailyQuiz}{Firefox Monitor} is a reputable source that tracks data breaches - they reported an advisory after the breach became public knowledge.
+
+$\hfill \break$
+A serious example of an unsalted password exposure incident was the Last.fm 2012 Breach, where 43.5 million accounts were leaked. The passwords were stored using an unsalted MD5 hashing, which is not secure enough to prevent cracking. \href{https://techcrunch.com/2016/09/01/43-million-passwords-hacked-in-last-fm-breach/}{TechCrunch} reported on the breach, and \href{https://monitor.firefox.com/breach-details/Lastfm}{Firefox Monitor} also reported an advisory after the breach became public knowledge. 
 
 \newpage
-\subsection{Part 9}
+\subsection*{Part 9}
 
 One major website that does not support 2FA is Aetna. I choose this example because Aetna is a major US insurance provider, and the fact that they do not have 2FA for their services, which handle HIPAA and highly sensitive data is very concerning. I have attached a screenshot below of the Aetna Accounts FAQ page, which never mentions 2FA, and additionally a website that tracks 2FA-compliance, \href{https://2fa.directory}{2fa.directory}.
 

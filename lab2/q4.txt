@@ -1,0 +1,29 @@
+REM Question 4
+REM Target: Windows
+REM Stop script once Python script is written and executed
+DELAY 1000
+GUI r
+DELAY 500
+STRING notepad
+DELAY 500
+ENTER
+DELAY 500
+STRING print("Hello World")
+DELAY 500
+ENTER
+CONTROL s
+DELAY 500
+STRING C:\Temp\Q4script.py
+ENTER
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 500
+STRING cd C:\Temp
+ENTER
+DELAY 500
+STRING python3 Q4script.py
+ENTER
