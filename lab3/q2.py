@@ -1,10 +1,11 @@
 import os
+import subprocess
 
-h = "889eebf863379116db419a618271f0dd16d20f96dbf77b78346659bba20baf30"
+h = "5c01e943db42684800123d6b1598c7e9efbc8e9050becaec1c4536f6e1c50907"
 
-for file in os.listdir("./Q1files"):
-    if os.path.isfile(os.path.join("./Q1files", file)):
-        sha256sum = os.system("sha256sum " + os.path.join("./Q1files", file))
-        if h in sha256sum.strip():
+for file in os.listdir("./Q2files"):
+    if os.path.isfile(os.path.join("./Q2files", file)):
+        sha256sum = subprocess.check_output(["sha256sum", os.path.join("./Q2files", file)])
+        if h in sha256sum.decode("utf-8"):
             print(f"Hash matches file {file}")
             break

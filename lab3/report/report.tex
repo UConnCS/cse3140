@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{CSE3140 — Lab 3}
+\author{Mike Medved, Benny Chen}
+\date{October 8th, 2022}
+
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{amssymb} 
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry} 
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{graphicx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    linkbordercolor={0 0 1}
+}
+
+\usemintedstyle{emacs}
+% \setmonofont{JetBrains Mono}
+
+\begin{document}
+
+\maketitle
+
+\section*{Deliverables}
+
+\subsection*{Part 1}
+
+In order to find the file with the matching SHA256 checksum, we wrote a short Python script to iterate through all files in \textit{Q1files} and report their checksums:
+
+\begin{minted}[fontsize=\scriptsize]{python}
+import os
+
+h = "04ebf0f4fe539ed72643bd01546aeaf372fdc1bd558e92afcc8c6078d4e5becd"
+
+print(f"Looking for matches: {h}")
+
+for file in os.listdir("./Q1files"):
+    if os.path.isfile(os.path.join("./Q1files", file)):
+        sha256sum = os.system("sha256sum " + os.path.join("./Q1files", file))\end{minted}    
+
+$\hfill \break$
+This script found that \textit{disesteem.exe} had the matching checksum that was in our \textit{Q1hash} file.
+
+\subsection*{Part 2}
+
+In order to find the file with the matching SHA256 checksum, we very slightly modified the Python script from Part 1 to stop and report which file actually matches the checksum. The script is shown below:
+
+\begin{minted}[fontsize=\scriptsize]{python}
+import os
+import subprocess
+
+h = "5c01e943db42684800123d6b1598c7e9efbc8e9050becaec1c4536f6e1c50907"
+
+for file in os.listdir("./Q2files"):
+    if os.path.isfile(os.path.join("./Q2files", file)):
+        sha256sum = subprocess.check_output(["sha256sum", os.path.join("./Q2files", file)])
+        if h in sha256sum.decode("utf-8"):
+            print(f"Hash matches file {file}")
+            break
+\end{minted}
+
+$\hfill \break$
+The script found that \textit{appelidage.exe} had the matching checksum that was in our \textit{Q2hash} file.
+
+\newpage
+\subsection*{Part 3}
+
+In order to find the file correctly signed with the given private key, we wrote a short Python script to iterate through all files in \textit{Q3files}, and verify each of their signatures against the known public key's signature. The script is shown below:
+
+\begin{minted}[fontsize=\scriptsize]{python}
+import os
+from Crypto.Hash import SHA256
+from Crypto.PublicKey import RSA
+from Crypto.Signature import PKCS1_v1_5
+
+key = RSA.import_key(open("./PublicKey.pem", "rb").read())
+
+for file in os.listdir("./Q3files"):
+    if os.path.isfile(os.path.join("./Q3files", file)):
+        with open(os.path.join("./Q3files", file), "rb") as f:
+            data = f.read()
+        digest = SHA256.new(data)
+        try:
+            PKCS1_v1_5.new(key).verify(digest, data)
+            print(f"Signature match: {file}")
+            break
+        except (ValueError, TypeError):
+            print(f"Signature does not match file {file}")
+\end{minted}
+
+$\hfill \break$
+The script found that \textit{monoclinic.exe.sign} was signed with the given private key, and by extension \textit{monoclinic.exe} was the signed binary associated with the given signatures files.
+
+\subsection*{Part 4}
+
+% <87><8D>^V<92>^^B@<BA><B4>~c^UC<A4><E9>`triumphum
+% roguish^O^O^O^O^O^O^O^O^O^O^O^O^O^O^O
+
+In order to decrypt the given ciphertext, we wrote a short Python script which utilized the given AES encryption key in order to decrypt the file using the PyCryptodome module. The script is shown below:
+
+\begin{minted}[fontsize=\scriptsize]{python}
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
+from Crypto.Random import get_random_bytes 
+        
+file_in = open('encrypted4.txt', 'rb')
+iv = file_in.read(16)
+original_data = file_in.read()
+file_in.close()
+file_in = open('.key.txt', 'rb')
+variable = file_in.read()
+file_in.close()
+
+cipher = AES.new(variable, AES.MODE_CBC, iv=iv)
+ciphered_data = cipher.decrypt(original_data)
+print(ciphered_data)
+
+file_out = open('Q4a', "wb")
+file_out.write(cipher.iv)
+file_out.write(ciphered_data)
+file_out.close()
+\end{minted}
+
+$\hfill \break$
+The decrypted contents of the file are shown below:
+
+\begin{minted}[fontsize=\scriptsize]{python}
+triumphum
+rougish
+\end{minted}
+
+\subsection*{Part 5}
+
+\textit{Pending}
+
+\subsection*{Part 6}
+
+\textit{Pending}
+
+\end{document}
