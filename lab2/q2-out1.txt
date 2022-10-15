@@ -1,0 +1,557 @@
+cse@cse3140-HVM-domU:~/Lab2$ python3 Q2.py
+[SSH] Error: 172.16.48.1:UfiMNF:sammie11
+[SSH] Error: 172.16.48.2:UfiMNF:sammie11
+[SSH] Error: 172.16.48.3:UfiMNF:sammie11
+[SSH] Error: 172.16.48.4:UfiMNF:sammie11
+[SSH] Error: 172.16.48.5:UfiMNF:sammie11
+[SSH] Error: 172.16.48.6:UfiMNF:sammie11
+[SSH] Error: 172.16.48.7:UfiMNF:sammie11
+[SSH] Error: 172.16.48.8:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.9:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.9:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.9:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.9:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.9:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.9:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.9:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.9:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.9:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.9:UOoEI3:emo
+[SSH] Auth Failed: 172.16.48.9:UZTyeu:tri
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.9:U0xE6h:18021980
+[SSH] Auth Failed: 172.16.48.10:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.10:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.10:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.10:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.10:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.10:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.10:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.10:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.10:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.10:UOoEI3:emo
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.10:UZTyeu:tri
+[SSH] Error: 172.16.48.11:UfiMNF:sammie11
+[SSH] Error: 172.16.48.12:UfiMNF:sammie11
+[SSH] Error: 172.16.48.13:UfiMNF:sammie11
+[SSH] Error: 172.16.48.14:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.15:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.15:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.15:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.15:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.15:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.15:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.15:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.15:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.15:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.15:UOoEI3:emo
+[SSH] Auth Failed: 172.16.48.15:UZTyeu:tri
+[SSH] Auth Failed: 172.16.48.15:U0xE6h:18021980
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.15:Uo5cVb:fagg0t
+[SSH] Error: 172.16.48.16:UfiMNF:sammie11
+[SSH] Error: 172.16.48.17:UfiMNF:sammie11
+[SSH] Error: 172.16.48.18:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.19:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.19:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.19:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.19:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.19:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.19:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.19:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.19:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.19:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.19:UOoEI3:emo
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.19:UZTyeu:tri
+[SSH] Error: 172.16.48.20:UfiMNF:sammie11
+[SSH] Error: 172.16.48.21:UfiMNF:sammie11
+[SSH] Error: 172.16.48.22:UfiMNF:sammie11
+[SSH] Error: 172.16.48.23:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.24:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.24:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.24:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.24:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.24:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.24:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.24:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.24:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.24:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.24:UOoEI3:emo
+[SSH] Success: 172.16.48.24:UZTyeu:tri
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.24:U0xE6h:18021980
+[SSH] Error: 172.16.48.25:UfiMNF:sammie11
+[SSH] Error: 172.16.48.26:UfiMNF:sammie11
+[SSH] Error: 172.16.48.27:UfiMNF:sammie11
+[SSH] Error: 172.16.48.28:UfiMNF:sammie11
+[SSH] Error: 172.16.48.29:UfiMNF:sammie11
+[SSH] Error: 172.16.48.30:UfiMNF:sammie11
+[SSH] Error: 172.16.48.31:UfiMNF:sammie11
+[SSH] Error: 172.16.48.32:UfiMNF:sammie11
+[SSH] Error: 172.16.48.33:UfiMNF:sammie11
+[SSH] Error: 172.16.48.34:UfiMNF:sammie11
+[SSH] Error: 172.16.48.35:UfiMNF:sammie11
+[SSH] Error: 172.16.48.36:UfiMNF:sammie11
+[SSH] Error: 172.16.48.37:UfiMNF:sammie11
+[SSH] Error: 172.16.48.38:UfiMNF:sammie11
+[SSH] Error: 172.16.48.39:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.40:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.40:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.40:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.40:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.40:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.40:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.40:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.40:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.40:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.40:UOoEI3:emo
+[SSH] Auth Failed: 172.16.48.40:UZTyeu:tri
+[SSH] Auth Failed: 172.16.48.40:U0xE6h:18021980
+[SSH] Auth Failed: 172.16.48.40:Uo5cVb:fagg0t
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.40:Ugom78:240581
+[SSH] Error: 172.16.48.41:UfiMNF:sammie11
+[SSH] Error: 172.16.48.42:UfiMNF:sammie11
+[SSH] Error: 172.16.48.43:UfiMNF:sammie11
+[SSH] Error: 172.16.48.44:UfiMNF:sammie11
+[SSH] Error: 172.16.48.45:UfiMNF:sammie11
+[SSH] Error: 172.16.48.46:UfiMNF:sammie11
+[SSH] Error: 172.16.48.47:UfiMNF:sammie11
+[SSH] Error: 172.16.48.48:UfiMNF:sammie11
+[SSH] Error: 172.16.48.49:UfiMNF:sammie11
+[SSH] Error: 172.16.48.50:UfiMNF:sammie11
+[SSH] Error: 172.16.48.51:UfiMNF:sammie11
+[SSH] Error: 172.16.48.52:UfiMNF:sammie11
+[SSH] Error: 172.16.48.53:UfiMNF:sammie11
+[SSH] Error: 172.16.48.54:UfiMNF:sammie11
+[SSH] Error: 172.16.48.55:UfiMNF:sammie11
+[SSH] Error: 172.16.48.56:UfiMNF:sammie11
+[SSH] Error: 172.16.48.57:UfiMNF:sammie11
+[SSH] Error: 172.16.48.58:UfiMNF:sammie11
+[SSH] Error: 172.16.48.59:UfiMNF:sammie11
+[SSH] Error: 172.16.48.60:UfiMNF:sammie11
+[SSH] Error: 172.16.48.61:UfiMNF:sammie11
+[SSH] Error: 172.16.48.62:UfiMNF:sammie11
+[SSH] Error: 172.16.48.63:UfiMNF:sammie11
+[SSH] Error: 172.16.48.64:UfiMNF:sammie11
+[SSH] Error: 172.16.48.65:UfiMNF:sammie11
+[SSH] Error: 172.16.48.66:UfiMNF:sammie11
+[SSH] Error: 172.16.48.67:UfiMNF:sammie11
+[SSH] Error: 172.16.48.68:UfiMNF:sammie11
+[SSH] Error: 172.16.48.69:UfiMNF:sammie11
+[SSH] Error: 172.16.48.70:UfiMNF:sammie11
+[SSH] Error: 172.16.48.71:UfiMNF:sammie11
+[SSH] Error: 172.16.48.72:UfiMNF:sammie11
+[SSH] Error: 172.16.48.73:UfiMNF:sammie11
+[SSH] Error: 172.16.48.74:UfiMNF:sammie11
+[SSH] Error: 172.16.48.75:UfiMNF:sammie11
+[SSH] Error: 172.16.48.76:UfiMNF:sammie11
+[SSH] Error: 172.16.48.77:UfiMNF:sammie11
+[SSH] Error: 172.16.48.78:UfiMNF:sammie11
+[SSH] Error: 172.16.48.79:UfiMNF:sammie11
+[SSH] Error: 172.16.48.80:UfiMNF:sammie11
+[SSH] Error: 172.16.48.81:UfiMNF:sammie11
+[SSH] Error: 172.16.48.82:UfiMNF:sammie11
+[SSH] Error: 172.16.48.83:UfiMNF:sammie11
+[SSH] Error: 172.16.48.84:UfiMNF:sammie11
+[SSH] Error: 172.16.48.85:UfiMNF:sammie11
+[SSH] Error: 172.16.48.86:UfiMNF:sammie11
+[SSH] Error: 172.16.48.87:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.88:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.88:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.88:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.88:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.88:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.88:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.88:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.88:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.88:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.88:UOoEI3:emo
+[SSH] Auth Failed: 172.16.48.88:UZTyeu:tri
+[SSH] Auth Failed: 172.16.48.88:U0xE6h:18021980
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.88:Uo5cVb:fagg0t
+[SSH] Error: 172.16.48.89:UfiMNF:sammie11
+[SSH] Error: 172.16.48.90:UfiMNF:sammie11
+[SSH] Error: 172.16.48.91:UfiMNF:sammie11
+[SSH] Error: 172.16.48.92:UfiMNF:sammie11
+[SSH] Error: 172.16.48.93:UfiMNF:sammie11
+[SSH] Error: 172.16.48.94:UfiMNF:sammie11
+[SSH] Error: 172.16.48.95:UfiMNF:sammie11
+[SSH] Error: 172.16.48.96:UfiMNF:sammie11
+[SSH] Error: 172.16.48.97:UfiMNF:sammie11
+[SSH] Error: 172.16.48.98:UfiMNF:sammie11
+[SSH] Error: 172.16.48.99:UfiMNF:sammie11
+[SSH] Error: 172.16.48.100:UfiMNF:sammie11
+[SSH] Error: 172.16.48.101:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.102:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.102:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.102:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.102:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.102:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.102:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.102:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.102:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.102:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.102:UOoEI3:emo
+[SSH] Auth Failed: 172.16.48.102:UZTyeu:tri
+[SSH] Auth Failed: 172.16.48.102:U0xE6h:18021980
+[SSH] Auth Failed: 172.16.48.102:Uo5cVb:fagg0t
+[SSH] Auth Failed: 172.16.48.102:Ugom78:240581
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.102:UFvcAo:ladybug01
+[SSH] Error: 172.16.48.103:UfiMNF:sammie11
+[SSH] Error: 172.16.48.104:UfiMNF:sammie11
+[SSH] Error: 172.16.48.105:UfiMNF:sammie11
+[SSH] Error: 172.16.48.106:UfiMNF:sammie11
+[SSH] Error: 172.16.48.107:UfiMNF:sammie11
+[SSH] Error: 172.16.48.108:UfiMNF:sammie11
+[SSH] Error: 172.16.48.109:UfiMNF:sammie11
+[SSH] Error: 172.16.48.110:UfiMNF:sammie11
+[SSH] Error: 172.16.48.111:UfiMNF:sammie11
+[SSH] Error: 172.16.48.112:UfiMNF:sammie11
+[SSH] Error: 172.16.48.113:UfiMNF:sammie11
+[SSH] Error: 172.16.48.114:UfiMNF:sammie11
+[SSH] Error: 172.16.48.115:UfiMNF:sammie11
+[SSH] Error: 172.16.48.116:UfiMNF:sammie11
+[SSH] Error: 172.16.48.117:UfiMNF:sammie11
+[SSH] Error: 172.16.48.118:UfiMNF:sammie11
+[SSH] Error: 172.16.48.119:UfiMNF:sammie11
+[SSH] Error: 172.16.48.120:UfiMNF:sammie11
+[SSH] Error: 172.16.48.121:UfiMNF:sammie11
+[SSH] Error: 172.16.48.122:UfiMNF:sammie11
+[SSH] Error: 172.16.48.123:UfiMNF:sammie11
+[SSH] Error: 172.16.48.124:UfiMNF:sammie11
+[SSH] Error: 172.16.48.125:UfiMNF:sammie11
+[SSH] Error: 172.16.48.126:UfiMNF:sammie11
+[SSH] Error: 172.16.48.127:UfiMNF:sammie11
+[SSH] Error: 172.16.48.128:UfiMNF:sammie11
+[SSH] Error: 172.16.48.129:UfiMNF:sammie11
+[SSH] Error: 172.16.48.130:UfiMNF:sammie11
+[SSH] Error: 172.16.48.131:UfiMNF:sammie11
+[SSH] Error: 172.16.48.132:UfiMNF:sammie11
+[SSH] Error: 172.16.48.133:UfiMNF:sammie11
+[SSH] Error: 172.16.48.134:UfiMNF:sammie11
+[SSH] Error: 172.16.48.135:UfiMNF:sammie11
+[SSH] Error: 172.16.48.136:UfiMNF:sammie11
+[SSH] Error: 172.16.48.137:UfiMNF:sammie11
+[SSH] Error: 172.16.48.138:UfiMNF:sammie11
+[SSH] Error: 172.16.48.139:UfiMNF:sammie11
+[SSH] Error: 172.16.48.140:UfiMNF:sammie11
+[SSH] Error: 172.16.48.141:UfiMNF:sammie11
+[SSH] Error: 172.16.48.142:UfiMNF:sammie11
+[SSH] Error: 172.16.48.143:UfiMNF:sammie11
+[SSH] Error: 172.16.48.144:UfiMNF:sammie11
+[SSH] Error: 172.16.48.145:UfiMNF:sammie11
+[SSH] Error: 172.16.48.146:UfiMNF:sammie11
+[SSH] Error: 172.16.48.147:UfiMNF:sammie11
+[SSH] Error: 172.16.48.148:UfiMNF:sammie11
+[SSH] Error: 172.16.48.149:UfiMNF:sammie11
+[SSH] Error: 172.16.48.150:UfiMNF:sammie11
+[SSH] Error: 172.16.48.151:UfiMNF:sammie11
+[SSH] Error: 172.16.48.152:UfiMNF:sammie11
+[SSH] Error: 172.16.48.153:UfiMNF:sammie11
+[SSH] Error: 172.16.48.154:UfiMNF:sammie11
+[SSH] Error: 172.16.48.155:UfiMNF:sammie11
+[SSH] Error: 172.16.48.156:UfiMNF:sammie11
+[SSH] Error: 172.16.48.157:UfiMNF:sammie11
+[SSH] Error: 172.16.48.158:UfiMNF:sammie11
+[SSH] Error: 172.16.48.159:UfiMNF:sammie11
+[SSH] Error: 172.16.48.160:UfiMNF:sammie11
+[SSH] Error: 172.16.48.161:UfiMNF:sammie11
+[SSH] Error: 172.16.48.162:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.163:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.163:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.163:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.163:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.163:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.163:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.163:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.163:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.163:Ur5O6l:nika123
+[SSH] Auth Failed: 172.16.48.163:UOoEI3:emo
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.163:UZTyeu:tri
+[SSH] Error: 172.16.48.164:UfiMNF:sammie11
+[SSH] Error: 172.16.48.165:UfiMNF:sammie11
+[SSH] Error: 172.16.48.166:UfiMNF:sammie11
+[SSH] Error: 172.16.48.167:UfiMNF:sammie11
+[SSH] Error: 172.16.48.168:UfiMNF:sammie11
+[SSH] Error: 172.16.48.169:UfiMNF:sammie11
+[SSH] Error: 172.16.48.170:UfiMNF:sammie11
+[SSH] Error: 172.16.48.171:UfiMNF:sammie11
+[SSH] Error: 172.16.48.172:UfiMNF:sammie11
+[SSH] Error: 172.16.48.173:UfiMNF:sammie11
+[SSH] Error: 172.16.48.174:UfiMNF:sammie11
+[SSH] Error: 172.16.48.175:UfiMNF:sammie11
+[SSH] Error: 172.16.48.176:UfiMNF:sammie11
+[SSH] Error: 172.16.48.177:UfiMNF:sammie11
+[SSH] Error: 172.16.48.178:UfiMNF:sammie11
+[SSH] Error: 172.16.48.179:UfiMNF:sammie11
+[SSH] Error: 172.16.48.180:UfiMNF:sammie11
+[SSH] Error: 172.16.48.181:UfiMNF:sammie11
+[SSH] Error: 172.16.48.182:UfiMNF:sammie11
+[SSH] Error: 172.16.48.183:UfiMNF:sammie11
+[SSH] Error: 172.16.48.184:UfiMNF:sammie11
+[SSH] Error: 172.16.48.185:UfiMNF:sammie11
+[SSH] Error: 172.16.48.186:UfiMNF:sammie11
+[SSH] Error: 172.16.48.187:UfiMNF:sammie11
+[SSH] Error: 172.16.48.188:UfiMNF:sammie11
+[SSH] Error: 172.16.48.189:UfiMNF:sammie11
+[SSH] Error: 172.16.48.190:UfiMNF:sammie11
+[SSH] Error: 172.16.48.191:UfiMNF:sammie11
+[SSH] Error: 172.16.48.192:UfiMNF:sammie11
+[SSH] Error: 172.16.48.193:UfiMNF:sammie11
+[SSH] Error: 172.16.48.194:UfiMNF:sammie11
+[SSH] Error: 172.16.48.195:UfiMNF:sammie11
+[SSH] Error: 172.16.48.196:UfiMNF:sammie11
+[SSH] Error: 172.16.48.197:UfiMNF:sammie11
+[SSH] Error: 172.16.48.198:UfiMNF:sammie11
+[SSH] Error: 172.16.48.199:UfiMNF:sammie11
+[SSH] Error: 172.16.48.200:UfiMNF:sammie11
+[SSH] Error: 172.16.48.201:UfiMNF:sammie11
+[SSH] Error: 172.16.48.202:UfiMNF:sammie11
+[SSH] Error: 172.16.48.203:UfiMNF:sammie11
+[SSH] Error: 172.16.48.204:UfiMNF:sammie11
+[SSH] Error: 172.16.48.205:UfiMNF:sammie11
+[SSH] Error: 172.16.48.206:UfiMNF:sammie11
+[SSH] Error: 172.16.48.207:UfiMNF:sammie11
+[SSH] Error: 172.16.48.208:UfiMNF:sammie11
+[SSH] Error: 172.16.48.209:UfiMNF:sammie11
+[SSH] Error: 172.16.48.210:UfiMNF:sammie11
+[SSH] Error: 172.16.48.211:UfiMNF:sammie11
+[SSH] Error: 172.16.48.212:UfiMNF:sammie11
+[SSH] Error: 172.16.48.213:UfiMNF:sammie11
+[SSH] Error: 172.16.48.214:UfiMNF:sammie11
+[SSH] Error: 172.16.48.215:UfiMNF:sammie11
+[SSH] Error: 172.16.48.216:UfiMNF:sammie11
+[SSH] Error: 172.16.48.217:UfiMNF:sammie11
+[SSH] Error: 172.16.48.218:UfiMNF:sammie11
+[SSH] Error: 172.16.48.219:UfiMNF:sammie11
+[SSH] Error: 172.16.48.220:UfiMNF:sammie11
+[SSH] Error: 172.16.48.221:UfiMNF:sammie11
+[SSH] Error: 172.16.48.222:UfiMNF:sammie11
+[SSH] Error: 172.16.48.223:UfiMNF:sammie11
+[SSH] Error: 172.16.48.224:UfiMNF:sammie11
+[SSH] Error: 172.16.48.225:UfiMNF:sammie11
+[SSH] Error: 172.16.48.226:UfiMNF:sammie11
+[SSH] Error: 172.16.48.227:UfiMNF:sammie11
+[SSH] Error: 172.16.48.228:UfiMNF:sammie11
+[SSH] Error: 172.16.48.229:UfiMNF:sammie11
+[SSH] Error: 172.16.48.230:UfiMNF:sammie11
+[SSH] Error: 172.16.48.231:UfiMNF:sammie11
+[SSH] Error: 172.16.48.232:UfiMNF:sammie11
+[SSH] Error: 172.16.48.233:UfiMNF:sammie11
+[SSH] Error: 172.16.48.234:UfiMNF:sammie11
+[SSH] Error: 172.16.48.235:UfiMNF:sammie11
+[SSH] Error: 172.16.48.236:UfiMNF:sammie11
+[SSH] Error: 172.16.48.237:UfiMNF:sammie11
+[SSH] Error: 172.16.48.238:UfiMNF:sammie11
+[SSH] Error: 172.16.48.239:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.240:UfiMNF:sammie11
+[SSH] Auth Failed: 172.16.48.240:UlsRta:jadebibou
+[SSH] Auth Failed: 172.16.48.240:UQi48d:money66
+[SSH] Auth Failed: 172.16.48.240:U3UZJP:43214321
+[SSH] Auth Failed: 172.16.48.240:UDGNMa:29011980
+[SSH] Auth Failed: 172.16.48.240:UObSIq:stars123
+[SSH] Auth Failed: 172.16.48.240:UpZEkf:clouds
+[SSH] Auth Failed: 172.16.48.240:Ue71Kh:thebeach
+[SSH] Auth Failed: 172.16.48.240:Ur5O6l:nika123
+Exception (client): Error reading SSH protocol banner
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2271, in _check_banner
+    buf = self.packetizer.readline(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 380, in readline
+    buf += self._read_timeout(timeout)
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/packet.py", line 609, in _read_timeout
+    raise EOFError()
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2094, in run
+    self._check_banner()
+  File "/usr/local/lib/python3.8/dist-packages/paramiko/transport.py", line 2275, in _check_banner
+    raise SSHException(
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+
+[SSH] Error: 172.16.48.240:UOoEI3:emo
+[SSH] Error: 172.16.48.241:UfiMNF:sammie11
+[SSH] Error: 172.16.48.242:UfiMNF:sammie11
+[SSH] Error: 172.16.48.243:UfiMNF:sammie11
+[SSH] Error: 172.16.48.244:UfiMNF:sammie11
+[SSH] Error: 172.16.48.245:UfiMNF:sammie11
+[SSH] Error: 172.16.48.246:UfiMNF:sammie11
+[SSH] Error: 172.16.48.247:UfiMNF:sammie11
+[SSH] Error: 172.16.48.248:UfiMNF:sammie11
+[SSH] Error: 172.16.48.249:UfiMNF:sammie11
+[SSH] Error: 172.16.48.250:UfiMNF:sammie11
+[SSH] Error: 172.16.48.251:UfiMNF:sammie11
+[SSH] Error: 172.16.48.252:UfiMNF:sammie11
+[SSH] Error: 172.16.48.253:UfiMNF:sammie11
+[SSH] Error: 172.16.48.254:UfiMNF:sammie11
