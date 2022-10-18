@@ -44,7 +44,8 @@ print(f"Looking for matches: {h}")
 
 for file in os.listdir("./Q1files"):
     if os.path.isfile(os.path.join("./Q1files", file)):
-        sha256sum = os.system("sha256sum " + os.path.join("./Q1files", file))\end{minted}    
+        sha256sum = os.system("sha256sum " + os.path.join("./Q1files", file))
+\end{minted}    
 
 $\hfill \break$
 This script found that \textit{disesteem.exe} had the matching checksum that was in our \textit{Q1hash} file.
